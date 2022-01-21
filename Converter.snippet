@@ -13,6 +13,7 @@
 				/// <summary>
 				/// $ClassComment$
 				/// </summary>
+				[ValueConversion(sourceType: typeof($SourceType$), targetType: typeof($TargetType$))]
 				public class $ClassName$ : IValueConverter
 				{
 					/// <summary>
@@ -98,6 +99,16 @@
 					<ID>ConvertBackReturnComment</ID>
 					<ToolTip>Convert Return comment</ToolTip>
 					<Default>!!! Explanation of the return of the Convert method here !!!</Default>
+				</Literal>
+				<Literal>
+					<ID>SourceType</ID>
+					<ToolTip>Type to convert from</ToolTip>
+					<Default>object</Default>
+				</Literal>
+				<Literal>
+					<ID>TargetType</ID>
+					<ToolTip>Type to convert to</ToolTip>
+					<Default>object</Default>
 				</Literal>
 			</Declarations>
 			<Imports>
