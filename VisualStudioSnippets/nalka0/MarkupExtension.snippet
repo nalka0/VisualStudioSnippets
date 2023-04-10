@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Markup Extension</Title>
+      <Author>nalka0</Author>
+      <Description>Creates a Markup extension class</Description>
+      <Shortcut>markupext</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp" Kind="file">
+        <![CDATA[/// <summary>
+                /// $ClassSummary$
+                /// </summary>
+				[MarkupExtensionReturnType(typeof($MarkupExtensionReturnType$))]
+				public class $ClassName$ : MarkupExtension
+				{
+					/// <summary>
+					/// $ProvideValueSummary$
+					/// </summary>
+					/// <param name="serviceProvider"><see cref="IServiceProvider"/> gathering all available services</param>
+					/// <returns>$ProvideValueReturn$</returns>
+					public override object ProvideValue(IServiceProvider serviceProvider)
+					{
+						throw new NotImplementedException();$end$
+					}
+				}]]>
+      </Code>
+      <Declarations>
+        <Literal>
+          <ID>ClassSummary</ID>
+          <ToolTip>Description of the class</ToolTip>
+          <Default>!!! Description of the class here !!!</Default>
+        </Literal>
+        <Literal>
+          <ID>MarkupExtensionReturnType</ID>
+          <ToolTip>Markup extension's return type</ToolTip>
+          <Default>object</Default>
+        </Literal>
+        <Literal>
+          <ID>ClassName</ID>
+          <ToolTip>The name of the markup extension</ToolTip>
+          <Default>MyMarkupExtension</Default>
+        </Literal>
+        <Literal>
+          <ID>ProvideValueReturn</ID>
+          <ToolTip>Markup extension's return value description</ToolTip>
+          <Default>!!! Description of the return value !!!</Default>
+        </Literal>
+        <Literal>
+          <ID>ProvideValueSummary</ID>
+          <ToolTip>Description of the ProvideValue method</ToolTip>
+          <Default>!!! Description of the ProvideValue method !!!</Default>
+        </Literal>
+      </Declarations>
+      <Imports>
+        <Import>
+          <Namespace>System</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Windows.Markup</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
